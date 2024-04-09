@@ -3,7 +3,7 @@ import json
 import time
 
 app = Flask(__name__)
-app.secret_key = 'lalala'
+app.secret_key = 'ulalala'
 
 # Load the fruits data
 with open('fruits.json', 'r') as f:
