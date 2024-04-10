@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.secret_key = 'ulalala'
 
 # Load the shoes data
-with open('shoes.json', 'r') as f:
+with open('Microservices/Ecommerce-Microservice-main/src/shoes.json', 'r') as f:
     shoes = json.load(f)
 print("Shoes loaded")
 
@@ -79,7 +79,7 @@ def shop_render():
 
 @app.route('/shop', methods=['GET'])
 def shop_render():
-    with open('shoes.json', 'r') as f:
+    with open('Microservices/Ecommerce-Microservice-main/src/shoes.json', 'r') as f:
         shoes = json.load(f)
     return render_template('shop.html', shoes=shoes)
 
