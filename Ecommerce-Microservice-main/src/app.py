@@ -5,10 +5,10 @@ import time
 app = Flask(__name__)
 app.secret_key = 'ulalala'
 
-# Load the fruits data
-with open('fruits.json', 'r') as f:
-    fruits = json.load(f)
-print("Fruits loaded")
+# Load the shoes data
+with open('shoes.json', 'r') as f:
+    shoes = json.load(f)
+print("Shoes loaded")
 
 bought_items = {}
 
@@ -73,9 +73,16 @@ def register():
     return render_template('register.html')
 
 
+'''@app.route('/shop', methods=['GET'])
+def shop_render():
+    return render_template('shop.html', shoes=shoes)'''
+
 @app.route('/shop', methods=['GET'])
 def shop_render():
-    return render_template('shop.html', fruits=fruits)
+    with open('shoes.json', 'r') as f:
+        shoes = json.load(f)
+    return render_template('shop.html', shoes=shoes)
+
 
 @app.route('/shop', methods=['POST'])
 def shop_submit():
@@ -91,10 +98,10 @@ def shop_submit():
 def billing():
     items_prices_quantities = {}
     total = 0
-    for fruit, quantity in bought_items.items():
-        price = fruits[fruit]["price"]
+    for shoe, quantity in bought_items.items():
+        price = shoes[shoe]["price"]
         subtotal = quantity*price
-        items_prices_quantities[fruit] = {"quantity": quantity, "price": price, "subtotal": subtotal} 
+        items_prices_quantities[shoe] = {"quantity": quantity, "price": price, "subtotal": subtotal} 
         total += subtotal
     print(items_prices_quantities)
     time.sleep(1)

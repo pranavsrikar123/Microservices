@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FruitBasket</title>
+    <title>Shoe Store</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
     <style>
         html, body {
@@ -108,16 +108,16 @@
 <body>
     <div class="background-image"></div>
     <div class="content">
-        <form id="fruit-selection-form" method="POST" action="/shop">
+        <form id="shoe-selection-form" method="POST" action="/shop">
             <div class="container">
-                {% for fruit, info in fruits.items() %}
+                {% for shoe, info in shoes.items() %}
                 <div class="card">
-                    <img src="{{ info.image }}" alt="{{ fruit }}">
-                    <h3>{{ fruit }}</h3>
+                    <img src="{{ info.image }}" alt="{{ shoe }}">
+                    <h3>{{ shoe }}</h3>
                     <p>Rs.{{ info.price }}.00</p>
                     <div class="card-footer">
                         <div class="quantity">
-                            <input type="number" name="{{ fruit }}" value="0" min="0">
+                            <input type="number" name="{{ shoe }}" value="0" min="0">
                         </div>
                     </div>
                 </div>

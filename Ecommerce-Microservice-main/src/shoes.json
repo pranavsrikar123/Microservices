@@ -1,0 +1,10 @@
+{
+    "Running Shoes": {"type": "Sport Shoes", "price": 2000, "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
+    "Sneakers": {"type": "Casual Shoes", "price": 10000, "image": "https://images.unsplash.com/photo-1552346154-21d32810aba3?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
+    "Boots": {"type": "Winter Shoes", "price": 5000, "image": "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
+    "Loafers": {"type": "Formal Shoes", "price": 1000, "image": "https://images.unsplash.com/photo-1616406432452-07bc5938759d?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
+    "Oxfords": {"type": "Formal Shoes", "price": 1500, "image": "https://images.unsplash.com/photo-1614253429340-98120bd6d753?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
+    "Sandals": {"type": "Casual Shoes", "price": 800, "image": "https://images.unsplash.com/photo-1603487742131-4160ec999306?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
+    "Slippers": {"type": "Casual Shoes", "price": 500, "image": "https://images.unsplash.com/photo-1622920799137-86c891159e44?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
+    "Flip Flops": {"type": "Casual Shoes", "price": 500, "image": "https://images.unsplash.com/photo-1617370653117-ff3a94af6cef?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
+}
