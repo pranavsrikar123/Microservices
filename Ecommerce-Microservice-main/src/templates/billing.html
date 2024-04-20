@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShoeLala</title>
+    <title>ShoeLala - Billing</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
     <style>
         html, body {
             height: 100%;
             margin: 0;
             padding: 0;
+            font-family: 'Playfair Display', serif;
         }
         .background-image {
             position: fixed;
@@ -27,55 +28,72 @@
         .content {
             position: relative;
             z-index: 1;
-            color: #333; /* Dark grey text color */
-            text-align: center;
+            color: #333;
+            text-align: left; /* Align content to the left */
             padding: 50px;
-            font-family: 'Playfair Display', serif; /* Playfair Display font */
         }
         .card {
-            background-color: rgb(36, 112, 46); /* Light green background */
-            border-radius: 5px; /* Rounded corners */
+            background-color: #000; /* Black background */
+            border-radius: 5px;
             padding: 20px;
-            margin: 20px auto; /* Center the card */
-            width: 100%; /* Set a width */
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Drop shadow */
+            margin: 20px auto; /* This centers the card, remove auto margin to align left */
+            width: 80%; /* Adjusted width */
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
             opacity: 0.8;
         }
-        /* Additional styles from billing.html */
         h1 {
-            text-align: center;
+            text-align: left; /* Align heading to the left */
             padding: 20px 0;
-            background-color: #20444a;
+            background-color: #8b0000; /* Red background */
             color: #fff;
-            width: 30%;
+            width: 100%;
             margin: 0 auto;
         }
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
-            font-size: 28px; /* Double the default font size */
+            font-size: 20px; /* Adjusted font size for better readability */
         }
         th, td {
             padding: 10px;
             text-align: left;
             border-bottom: 1px solid #ddd;
-            font-size: 32px; /* Double the default font size */
         }
         th {
-            background-color: #17a2b8;
-            color: rgb(33, 16, 16);
+            background-color: #8b0000; /* Red background */
+            color: #fff;
         }
         tr:nth-child(even) {
             background-color: #d3d921;
         }
         .total {
-            color: #112022;
+            color: #8b0000; /* Red text */
             font-weight: bold;
-            background-color: rgb(28, 194, 209);
-            width: 40%;
-            margin: 0 auto;
-            font-size: 32px;
+            background-color: #fff; /* White background */
+            width: 100%;
+            margin: 0 auto; /* This centers the total, remove auto margin to align left */
+            font-size: 24px; /* Adjusted font size */
+            padding: 10px 0;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #8b0000; /* Red background */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #8b0000; /* Red background */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -106,6 +124,10 @@
             </table>
         </div>
         <h2 class="total">Total: Rs.{{ total }}.00</h2>
+        <a href="{{ url_for('shop_render') }}" class="back-button">Back to Shop</a>
     </div>
+    <footer>
+        &copy; 2023 ShoeLala. All rights reserved.
+    </footer>
 </body>
 </html>

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for, redirect, flash, jsonify
+from flask import Flask, render_template, request, url_for, redirect, flash, jsonify, session
 import json
 import time
 
@@ -119,6 +119,7 @@ def health():
     return jsonify(
         status="UP"
     )
+
 
 if __name__ == '__main__':
     app.run()
