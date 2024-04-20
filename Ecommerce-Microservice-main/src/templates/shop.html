@@ -6,6 +6,15 @@
     <title>Shoe Store</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
     <style>
+    
+        /* Hide the arrow marks for number input */
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        
+    
         html, body {
             height: 100%;
             margin: 0;
@@ -117,8 +126,12 @@
                     <p>Rs.{{ info.price }}.00</p>
                     <div class="card-footer">
                         <div class="quantity">
-                            <input type="number" name="{{ shoe }}" value="0" min="0">
+                            <input id = "{{shoe}}" type="number" name="{{ shoe }}" value="0" min="0">
                         </div>
+                        
+                        <button onclick="plus('{{ shoe }}')" id = "{{shoe}}">+</button>
+                        
+                        <button onclick="minus('{{ shoe }}')" id = "{{shoe}}">-</button>
                     </div>
                 </div>
                 {% endfor %}
@@ -127,4 +140,28 @@
         </form> 
     </div>
 </body>
+<script>
+    function plus(shoe)
+    {
+        event.preventDefault()
+        console.log(shoe)
+        var value = parseInt(document.getElementById(shoe).value)
+    
+        value+=1
+        document.getElementById(shoe).value = value
+
+    }
+
+    function minus(shoe)
+    {
+        event.preventDefault()
+        console.log(shoe)
+        var value = parseInt(document.getElementById(shoe).value)
+        value-=1
+        document.getElementById(shoe).value = value
+
+    }
+</script>
+
+
 </html>
